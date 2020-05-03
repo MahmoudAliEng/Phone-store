@@ -8,12 +8,18 @@ body {
     font-family: 'Poppins', sans-serif;
 }
 
+button {
+    font-family: 'Poppins', sans-serif;
+}
+
+/* =============== Heeder Styling =============== */
+
 header {
     display: flex;
     height: 12vh;
     margin: 0 auto;
     width: 86%;
-    align-items: center; /* Center the alignments for all the items of the flexible <div> element, sets the align-self value on all direct children*/
+    align-items: center; /* Center the alignments for all the items of the flexible <div> element according to the cross axis , sets the align-self value on all direct children*/
 }
 
 .logo-container, .nav-links, .cart  {
@@ -46,4 +52,121 @@ nav {
 .cart {
     flex: 1; /* Divide the header space between the 3 components*/
     justify-content: flex-end;
+}
+
+/* =============== Main Styling =============== */
+
+.presentation {
+    align-items: center;
+    display: flex;
+    margin: 0 auto;
+    width: 86%;
+    min-height: 60vh;
+}
+
+.introduction {
+    flex: 1;
+}
+
+.backgroundclip h1 {
+    background: linear-gradient(to right, #026161, #04fcfc);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+.np-backgroundclip h1 {
+    color:black;
+  }
+
+.intro-text h1 {
+    font-size: 2.75em;
+    font-weight: 500;
+}
+
+.intro-text p {
+    color: #666670;
+    font-size: 1.4em;
+    margin-top: 5px;
+}
+
+.cta {
+    margin: 50px 0 0 0;
+}
+
+.cta-select {
+    background: transparent;
+    border: 2px solid #2e4cf5;
+    color: #2e4cf5;
+    cursor: pointer;
+    font-size: 16px;
+    height: 50px;
+    width: 150px;
+}
+
+.cta-add {
+    background: #2e4cf5;
+    border: none;
+    color: beige;
+    cursor: pointer;
+    font-size: 16px;
+    height: 50px;
+    width: 150px;
+    margin: 20px 0 0 20px;
+}
+.cover {
+    display: flex;
+    flex: 1;
+    justify-content: center;
+}
+
+.cover img {
+    animation: drop 1.5s ease;
+    height: 60vh;
+    filter: drop-shadow(0px 5px 3px black); /* Add shadow for the image*/
+}
+
+.big-circle {
+    height: 95%;
+    opacity: .4;
+    position: absolute;
+    right: 0;
+    top: 0;
+    z-index: -1;
+}
+
+.mid-circle {
+    height: 60%;
+    opacity: .5;
+    position: absolute;
+    right: 30%;
+    top: 30%;
+    z-index: -1;
+}
+
+.small-circle {
+    position: absolute;
+    bottom: 0%;
+    left: 25%;
+    z-index: -1;
+}
+
+.phone-select {
+    display: flex;
+    justify-content: space-around;
+    position: absolute;
+    right: 21%;
+    top: 78%;
+    width: 15%;
+}
+
+@keyframes drop {
+    0% {
+        opacity: 0;
+        transform: translateY(-80px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }

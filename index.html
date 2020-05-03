@@ -7,6 +7,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css" type="text/css">
+    <link rel="shortcut icon" href="./img/favico.ico" type="image/x-icon">
+    <script src="./modernizr.js"></script>
     <title>Our store</title>
 </head>
 
@@ -45,8 +47,36 @@
                 <img src="./img/next-phone.jpg" alt="phone">
             </div>
         </section>
+
+        <div class="phone-select">
+            <img src="./img/arrow-left.svg" alt="arrow left">
+            <img src="./img/dot.svg" alt="unfilled dot">
+            <img src="./img/dot-full.svg" alt="full dot">
+            <img src="./img/dot-full.svg" alt="full dot">
+            <img src="./img/arrow-right.svg" alt="arrow right">
+        </div>
+        <img class="big-circle" src="./img/big-eclipse.svg" alt="big circle">
+        <img class="mid-circle" src="./img/mid-eclipse.svg" alt="meduim circle">
+        <img class="small-circle" src="./img/small-eclipse.svg" alt="small circle">
     </main>
 
+    <!-- Test if UA supports the background clip effect or not-->
+    <!-- We can go even further for android versions that does not support that, link below -->
+    <!-- https://css-tricks.com/image-under-text/    -->
+    <script>
+        Modernizr.addTest('backgroundclip',function() {
+      
+          var div = document.createElement('div');
+      
+          if ('backgroundClip' in div.style)
+            return true;
+      
+          'Webkit Moz O ms Khtml'.replace(/([A-Za-z]*)/g,function(val) { 
+            if (val+'BackgroundClip' in div.style) return true;
+          });
+      
+        });
+      </script>
 </body>
 
 </html>
