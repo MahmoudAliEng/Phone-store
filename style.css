@@ -7,3 +7,43 @@
 body {
     font-family: 'Poppins', sans-serif;
 }
+
+header {
+    display: flex;
+    height: 12vh;
+    margin: 0 auto;
+    width: 86%;
+    align-items: center; /* Center the alignments for all the items of the flexible <div> element, sets the align-self value on all direct children*/
+}
+
+.logo-container, .nav-links, .cart  {
+    display: flex; /* Display all the 3 header components in one line*/
+}
+
+.logo {
+    font-weight: 400;
+    margin: 5px;
+}
+
+.logo-container {
+    flex:1; /* Divide the header space between the 3 components*/
+}
+
+nav {
+    flex: 2; /* Divide the header space between the 3 components*/
+}
+
+.nav-links {
+    justify-content: space-around; /* Defines how the browser distributes space between and around content items along the main-axis of a flex container, and the inline axis of a grid container.*/
+    list-style: none; /* Remove dots from list items*/
+}
+
+.nav-link {
+    color: #5f5f90;
+    font-size: 18px;
+    text-decoration: none;
+}
+.cart {
+    flex: 1; /* Divide the header space between the 3 components*/
+    justify-content: flex-end;
+}
